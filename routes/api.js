@@ -7,7 +7,6 @@ function isAuthenticated (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler
 	// Passport adds this method to request object. A middleware is allowed to add properties to
 	// request and response objects
-
 	//allow all get request methods
 	if(req.method === "GET"){
 		return next();
@@ -15,7 +14,6 @@ function isAuthenticated (req, res, next) {
 	if (req.isAuthenticated()){
 		return next();
 	}
-
 	// if the user is not authenticated then redirect him to the login page
 	return res.redirect('/#login');
 };
@@ -39,13 +37,10 @@ router.route('/posts')
 	})
 	//gets all posts
 	.get(function(req, res){
-		console.log('debug1');
 		Post.find(function(err, posts){
-			console.log('debug2');
 			if(err){
 				return res.status(500).send({ error: 'not found' });
 			}
-			//return res.send(200,posts);
 			return res.status(200).send(posts);
 		});
 	});
@@ -65,10 +60,8 @@ router.route('/posts/:id')
 		Post.findById(req.params.id, function(err, post){
 			if(err)
 				res.send(err);
-
 			post.created_by = req.body.created_by;
 			post.text = req.body.text;
-
 			post.save(function(err, post){
 				if(err)
 					res.send(err);

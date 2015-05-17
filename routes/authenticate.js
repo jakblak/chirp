@@ -30,7 +30,5 @@ module.exports = function(passport){
 		req.logout();
 		res.redirect('/');
 	});
-
 	return router;
-
 }
