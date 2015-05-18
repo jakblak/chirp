@@ -6,11 +6,14 @@ https://www.youtube.com/watch?v=Jh0er2pRcq8
 
 
 ## TODO
-- create a config file
-- move mongoose, passport into config
-- fix logout
-- add delete option
+- Refactor:
+- - routing, passport from server.js   +  add controllers for server routing
+- add delete post option
+- use bower
+- make clean URL's
 
 ### DONE
-* removed deprecated code, console logs
+* removed deprecated code, console logs, comments
 * refactored angularJS files into seperate controller/service
+* fixed logout
+* moved: models/DB into seperate files
