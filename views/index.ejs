@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Chirp</title>
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body ng-app="chirpApp">
+		<div id='main' class="container">
+			<nav class="navbar-fluid navbar-default navbar-fixed-top">
+				<div class="container">
+					<a class="navbar-brand" href="#"> Chirp! </a>
+					<p class="navbar-text"> Learn the MEAN stack by building this tiny app</p>
+					<p class="navbar-right navbar-text" ng-hide="authenticated"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+					<p class="navbar-right navbar-text" ng-show="authenticated"><a href="#" ng-click="signout()">Logout</a></p>
+					<p class="navbar-right navbar-text" ng-show="authenticated">Signed in as {{current_user}}</p>
+				</div>
+			</nav>
+			<div class="col-md-offset-2 col-md-8">
+				<div ng-view>
+				</div>
+			</div>
+		</div>
+		<!-- Load Bower libraries -->
+		<script type="text/javascript" src="/lib/angular/angular.js"></script>
+		<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+
+		<!-- Load local libraries -->
+		<script src="js/chirpApp.js"></script>
+		<script src="js/chirpSrvc.js"></script>
+		<script src="js/chirpCtrl.js"></script>
+	</body>
+</html>
