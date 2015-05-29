@@ -1,3 +1,4 @@
+## ORIGINAL
 https://www.youtube.com/watch?v=Jh0er2pRcq8
 
 - npm start
@@ -7,7 +8,7 @@ https://www.youtube.com/watch?v=Jh0er2pRcq8
 - Refactor:
 - - routing, passport from server.js   +  add controllers for server routing
 - add delete post option
-- use bower
+- use bower, gulp
 - make clean URL's
 
 ### DONE
