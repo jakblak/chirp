@@ -1,0 +1,25 @@
+{
+  "name": "Chirp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jakblak/chirp",
+  "authors": [
+    "Patrick Schroeder <schroe9@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0"
+  }
+}

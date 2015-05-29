@@ -1,2 +1,4 @@
 node_modules
-public/bower_components
+public/lib
+.DS_Store
+npm-debug.log
