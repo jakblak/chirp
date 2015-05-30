@@ -8,10 +8,17 @@
 		<div id='main' class="container">
 			<nav class="navbar-fluid navbar-default navbar-fixed-top">
 				<div class="container">
+<<<<<<< HEAD
 					<a class="navbar-brand" href="#"> Chirp! </a>
 					<p class="navbar-text"> Learn the MEAN stack by building this tiny app</p>
 					<p class="navbar-right navbar-text" ng-hide="authenticated"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
 					<p class="navbar-right navbar-text" ng-show="authenticated"><a href="#" ng-click="signout()">Logout</a></p>
+=======
+					<a class="navbar-brand" href="#/"> Chirp! </a>
+					<p class="navbar-text"> Learn the MEAN stack by building this tiny app</p>
+					<p class="navbar-right navbar-text" ng-hide="authenticated"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+					<p class="navbar-right navbar-text" ng-show="authenticated"><a href="#/" ng-click="signout()">Logout</a></p>
+>>>>>>> auth
 					<p class="navbar-right navbar-text" ng-show="authenticated">Signed in as {{current_user}}</p>
 				</div>
 			</nav>
@@ -26,8 +33,18 @@
 		<script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
 
 		<!-- Load local libraries -->
+<<<<<<< HEAD
 		<script src="js/chirpApp.js"></script>
 		<script src="js/chirpSrvc.js"></script>
 		<script src="js/chirpCtrl.js"></script>
+=======
+		<script src="js/app.js"></script>
+		<script src="js/route-config.js"></script>
+
+	       <!-- Controllers and services -->
+		<script src="js/services/chirpSrvc.js"></script>
+		<script src="js/controllers/mainCtrl.js"></script>
+		<script src="js/controllers/authCtrl.js"></script>
+>>>>>>> auth
 	</body>
 </html>
