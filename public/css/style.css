@@ -48,3 +48,7 @@ a {
 .has-feedback .form-control {
   padding-left: 42px;
 }
+
+.warning{
+   border:1px solid red;
+ }
