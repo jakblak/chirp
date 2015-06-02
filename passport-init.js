@@ -4,7 +4,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var bCrypt = require('bcrypt-nodejs');
 
 module.exports = function(passport) {
-  // Passport needs to be able to serialize and deserialize users to support persistent login sessions
+  // Passport needs to serialize and deserialize users to support persistent login
   passport.serializeUser(function(user, done) {
     console.log('serializing user:', user.username);
     done(null, user._id);
@@ -40,7 +40,6 @@ module.exports = function(passport) {
             return done(null, false); // redirect back to login page
           }
           // User and password both match, return user from done method
-          // which will be treated like success
           return done(null, user);
         }
       );
@@ -48,10 +47,9 @@ module.exports = function(passport) {
   ));
 
   passport.use('signup', new LocalStrategy({
-      passReqToCallback: true // allows us to pass back the entire request to the callback
+      passReqToCallback: true     // pass back the entire request to the callback
     },
     function(req, username, password, done) {
-
       // find a user in mongo with provided username
       User.findOne({
         'username': username
@@ -93,5 +91,4 @@ module.exports = function(passport) {
   var createHash = function(password) {
     return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null);
   };
-
 };

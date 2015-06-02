@@ -1,4 +1,5 @@
 'use strict';
 
 angular
-  .module('chirpApp', ['ngRoute', 'ngResource']);
+  .module('chirpApp',
+    ['ngRoute', 'ngResource']);

@@ -1,8 +1,8 @@
 body {
-	padding-top:70px;
-	width: 100%;
+    padding-top:70px;
+    width: 100%;
     height: 100%;
-	width: 100%;
+    width: 100%;
     height: 100%;
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -24,7 +24,7 @@ a {
 
 .odd {
 	background-color: #f2f9ff;
-	
+
 }
 .even {
 	background-color: #eceff3;
@@ -34,4 +34,17 @@ a {
 	max-width: 330px;
 	padding: 5px;
 	margin: 0 auto;
+}
+
+.has-feedback .form-control-feedback {
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  color: #555;
+}
+
+.has-feedback .form-control {
+  padding-left: 42px;
 }
